@@ -22,7 +22,6 @@ class ToDoListViewController: UITableViewController {
         
         let newItem = Item()
         newItem.title = "find Mike"
-        newItem.done = true
         itemArray.append(newItem)
         
         let newItem2 = Item()
@@ -33,9 +32,9 @@ class ToDoListViewController: UITableViewController {
         newItem3.title = "call Katy"
         itemArray.append(newItem3)
         
-//        if let items = defaults.array(forKey: "TodoListArrayKey") as? [String] {
-//            itemArray = items
-//        }
+        if let items = defaults.array(forKey: "TodoListArrayKey") as? [Item] {
+            itemArray = items
+        }
     }
     
     //MARK: - Tableview Datasource Methods
